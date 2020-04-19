@@ -3,7 +3,7 @@ function takeANumber(line) {
   let number = 0;
   number = number + 1;
   line.push(number);
-  return  `You are number ${number} in line.`;
+  return  `Welcome ${}You are number ${number} in line.`;
 }
 function nowServing(line) {
   if (line.length !== 0) {
@@ -18,7 +18,7 @@ function currentLine(line) {
   }
   let linePeople = 'The line is currently: ';
   for (let i = 0; i < line.length; i++) {
-    if (line.length - 1 == i) {
+    if (line.length - 1 === i) {
       linePeople += ((i+1) + ". " + line[i]);
     } 
     else {
