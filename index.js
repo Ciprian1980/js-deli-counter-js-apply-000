@@ -1,12 +1,13 @@
-function takeANumber(line,newPerson) {
-  line.push(newPerson);
-  return `Welcome, ${newPerson}. You are number ${line.length} in line.`;
+var number = 0;
+function takeANumber(line) {
+  number = number + 1;
+  line.push(number);
+  return  `You are number ${number} in line.`;
 }
 function nowServing(line) {
   if (line.length !== 0) {
     return "Currently serving " + line.shift () + ".";
-    //line.shift();
-  }else if (line.length === 0) {
+    }else if (line.length === 0) {
     return "There is nobody waiting to be served!";
   }
 }
@@ -23,6 +24,5 @@ function currentLine(line) {
       linePeople += ((i+1) + ". " + line[i] + ", ");
       }
   }
-  //console.log(linePeople);
-  return linePeople;
+ return linePeople;
 }
