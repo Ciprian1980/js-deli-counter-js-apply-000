@@ -1,9 +1,9 @@
 
-function takeANumber(line) {
+function takeANumber(line, person) {
   let number = 0;
   number = number + 1;
   line.push(number);
-  return  `Welcome ${}You are number ${number} in line.`;
+  return  `Welcome ${person}, You are number ${number} in line.`;
 }
 function nowServing(line) {
   if (line.length !== 0) {
